@@ -1,5 +1,5 @@
-provider aws {
-  profile = "default"
-  region  = "as-east-1"
+provider "aws" {
+    profile = "default"
+    region = "us-east-1"
+   
 }
-Footer
