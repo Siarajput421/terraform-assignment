@@ -1,5 +1,5 @@
 #security group
-resource "aws_security_group" "terrapublic" {
+resource "aws_security_group" "public" {
   name = "terra-public-sg"
   description = "Public internet access"
   vpc_id = aws_vpc.terraform-vpc.id
@@ -23,5 +23,5 @@ resource "aws_security_group_rule" "public_in_outbound" {
   to_port           = 0
   protocol          = "-1"
   cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = aws_security_group.terrapublic.id
+  security_group_id = aws_security_group.public.id
 }
